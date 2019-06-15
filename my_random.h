@@ -4,3 +4,5 @@ uint32_t PMrand();
 
 void MT_initializer();
 uint32_t MTrand();
+
+uint32_t XORrand();
