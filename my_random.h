@@ -1,4 +1,6 @@
-long long int PMrand();
+#include <stdint.h>
+
+uint32_t PMrand();
 
 void MT_initializer();
-unsigned long MTrand();
+uint32_t MTrand();

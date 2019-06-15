@@ -1,3 +1,3 @@
 rm a.out
 
-gcc main.c park_miller.c Mersenne_twister.c
+gcc main.c park_miller.c Mersenne_twister.c -std=c11

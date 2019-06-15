@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <math.h>
 
+#include "my_random.h"
+
 #define W 32
 #define N 624
 #define M 397
@@ -19,10 +21,10 @@
 #define UPPER_MASK 0x80000000UL
 #define LOWER_MASK 0x7FFFFFFFUL
 
-static unsigned long x[N]; // state vector
+static uint64_t x[N]; // state vector
 int mt_flag = 0; // 0 means not initialized
 
-unsigned long long int seed = 0;
+uint64_t seed = 0;
 
 static int i = 0;
 
@@ -34,9 +36,9 @@ void MT_initializer() {
 	}
 }
 
-unsigned long MTrand() {
-	unsigned long y;
-	unsigned long z;
+uint32_t MTrand() {
+	uint64_t y;
+	uint64_t z;
 	if (mt_flag == 0) {
 		MT_initializer();
 		mt_flag = 1;
@@ -53,5 +55,5 @@ unsigned long MTrand() {
 	y = y ^ (y >> L);
 
 	i = (i + 1) % N;
-	return y;
+	return (uint32_t)y;
 }

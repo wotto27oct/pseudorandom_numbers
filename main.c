@@ -3,11 +3,11 @@
 
 int main(){
 	for (int i = 0; i < 10; i++) {
-		printf("%lld\n", PMrand());
+		printf("%u\n", PMrand());
 	}
 	
 	for (int i = 0; i < 10; i++) {
-		printf("%lu\n", MTrand());
+		printf("%u\n", MTrand());
 	}
 	return 0;
 }
